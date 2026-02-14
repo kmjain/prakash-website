@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Official website of Prakash Moswal. Simple, modern landing page with services and contact information."
+    />
+    <title>Prakash Moswal | Official Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav-wrap">
+        <a href="#" class="brand">Prakash Moswal</a>
+        <button class="menu-btn" aria-label="Open menu" id="menuBtn">Menu</button>
+        <nav class="nav" id="navMenu">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="kicker">Welcome to my website</p>
+            <h1>Building trusted work with a simple, clear approach.</h1>
+            <p class="hero-copy">
+              Hello, I am <strong>Prakash Moswal</strong>. This is my official
+              web presence where you can learn about what I do and get in touch.
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">Get in touch</a>
+              <a href="#services" class="btn btn-secondary">View services</a>
+            </div>
+          </div>
+          <aside class="hero-card">
+            <h2>Quick highlights</h2>
+            <ul>
+              <li>Professional and reliable service</li>
+              <li>Transparent communication</li>
+              <li>Focused on quality outcomes</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <p class="section-label">About</p>
+          <h2>Who I am</h2>
+          <p class="section-copy">
+            I work with dedication and long-term commitment. My goal is to
+            deliver value through consistent effort, clear communication, and
+            practical solutions.
+          </p>
+        </div>
+      </section>
+
+      <section id="services" class="section section-alt">
+        <div class="container">
+          <p class="section-label">Services</p>
+          <h2>What I offer</h2>
+          <div class="card-grid">
+            <article class="card">
+              <h3>Consultation</h3>
+              <p>
+                One-on-one guidance to understand requirements and suggest the
+                best path forward.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Project Support</h3>
+              <p>
+                End-to-end support for planning, execution, and delivery with
+                accountability.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Ongoing Assistance</h3>
+              <p>
+                Continuous support to maintain quality and adapt to changing
+                needs over time.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container contact-wrap">
+          <div>
+            <p class="section-label">Contact</p>
+            <h2>Let us connect</h2>
+            <p class="section-copy">
+              Reach out for inquiries, collaboration, or any information you
+              need.
+            </p>
+          </div>
+          <a class="btn btn-primary large" href="mailto:hello@prakashmoswal.com">
+            hello@prakashmoswal.com
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-row">
+        <p>© <span id="year"></span> Prakash Moswal. All rights reserved.</p>
+        <p class="muted">prakashmoswal.com</p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
