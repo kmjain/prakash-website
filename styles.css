@@ -1,11 +1,11 @@
 :root {
-  --bg: #090d18;
-  --bg-soft: #121a2f;
-  --card: #131c34;
-  --text: #e9eeff;
-  --muted: #a8b4d8;
-  --brand: #6ea8ff;
-  --brand-2: #7af3d0;
+  --bg: #081325;
+  --bg-soft: #102038;
+  --card: #112340;
+  --text: #ecf1ff;
+  --muted: #b2bfdc;
+  --brand: #d4ab63;
+  --brand-2: #7fc9ff;
   --border: rgba(255, 255, 255, 0.12);
   --shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
 }
@@ -22,8 +22,8 @@ body {
   padding: 0;
   font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   color: var(--text);
-  background: radial-gradient(1200px 600px at 10% -5%, #162647, transparent),
-    radial-gradient(1000px 500px at 100% 10%, #123749, transparent), var(--bg);
+  background: radial-gradient(1200px 600px at 10% -5%, #18375f, transparent),
+    radial-gradient(1000px 500px at 100% 10%, #142744, transparent), var(--bg);
 }
 
 a {
@@ -150,8 +150,8 @@ p {
 }
 
 .btn-primary {
-  background: linear-gradient(130deg, var(--brand), #829dff);
-  color: #050710;
+  background: linear-gradient(130deg, var(--brand), #f0d39a);
+  color: #1d1404;
 }
 
 .btn-primary:hover {
