@@ -1,188 +1,874 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Prakash Moswal & Associates - Chartered Accountancy firm offering audit, taxation, GST, and business advisory services."
-    />
-    <title>Prakash M Oswal & Company | Chartered Accountants</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='65' font-size='70' font-weight='bold' text-anchor='middle' fill='%23d4ab63'>PM</text></svg>" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="container nav-wrap">
-        <a href="#" class="brand brand-large">PRAKASH M OSWAL & COMPANY</a>
-        <button class="menu-btn" aria-label="Open menu" id="menuBtn">Menu</button>
-        <nav class="nav" id="navMenu">
-          <a href="#services">Services</a>
-          <a href="#about">About Us</a>
-          <a href="#contact">Contact Us</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA Prakash M Oswal & Co. - Legacy Expertise, Modern Financial Leadership</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/47f7f2f4-2c7f-44f6-8a82-03a6b83ead86">
+    <link rel="shortcut icon" type="image/x-icon" href="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/47f7f2f4-2c7f-44f6-8a82-03a6b83ead86">
+    <link rel="apple-touch-icon" href="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/47f7f2f4-2c7f-44f6-8a82-03a6b83ead86">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #002855;
+            --secondary-blue: #003d7a;
+            --accent-blue: #0056a8;
+            --light-blue: #e3f2fd;
+            --accent-orange: #ff7f32;
+            --text-dark: #1a1a1a;
+            --text-gray: #666;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --gradient-start: #002855;
+            --gradient-mid: #003d7a;
+            --gradient-end: #0056a8;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 60px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-blue);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 90px;
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(0, 86, 168, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 50%, rgba(0, 61, 122, 0.3) 0%, transparent 50%);
+            z-index: 0;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-orange);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        .cta-button:hover {
+            background: #e66e28;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 127, 50, 0.4);
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Statistics Section */
+        .stats {
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%);
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+            z-index: 0;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-card {
+            text-align: center;
+            color: var(--white);
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #e3f2fd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 2rem;
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-bottom: 3rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            border-radius: 18px;
+            padding: 2.2rem 2rem;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 12px 35px rgba(0, 40, 85, 0.25);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top left, rgba(255,255,255,0.25), transparent 55%);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 18px 45px rgba(0, 40, 85, 0.35);
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-icon-wrapper {
+            width: 70px;
+            height: 70px;
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            background: rgba(255,255,255,0.16);
+            backdrop-filter: blur(8px);
+        }
+
+        .service-icon-wrapper i {
+            font-size: 2rem;
+            color: #ffffff;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .service-card p {
+            font-size: 0.98rem;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* Individual service gradients */
+        .service-audit    { background: linear-gradient(145deg, #0046a0, #001f4e); }
+        .service-tax      { background: linear-gradient(145deg, #00796b, #004d40); }
+        .service-account  { background: linear-gradient(145deg, #6a1b9a, #311b92); }
+        .service-internal { background: linear-gradient(145deg, #c2185b, #880e4f); }
+        .service-vcfo     { background: linear-gradient(145deg, #f57c00, #e65100); }
+        .service-ancil    { background: linear-gradient(145deg, #455a64, #263238); }
+
+        /* About Section */
+        .about {
+            background: var(--bg-light);
+            padding: 5rem 2rem;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 2fr;
+            gap: 3rem;
+            align-items: stretch;
+        }
+
+        .about-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fbff 100%);
+            border: 1px solid rgba(0, 61, 122, 0.1);
+            border-radius: 24px;
+            padding: 2.8rem 2.2rem;
+            box-shadow: 0 20px 50px rgba(0, 40, 85, 0.12);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
+        }
+
+        .about-image-container {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-image {
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            box-shadow: 0 14px 40px rgba(0, 40, 85, 0.25);
+            border: 6px solid var(--white);
+            outline: 3px solid var(--accent-blue);
+            object-fit: cover;
+            margin: 0 auto 1.5rem;
+            display: block;
+        }
+
+        .about-name {
+            margin-top: 1rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        .about-title {
+            color: var(--text-gray);
+            font-size: 1rem;
+            margin-top: 0.25rem;
+        }
+
+        .about-card-tagline {
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            color: var(--secondary-blue);
+            font-style: italic;
+            text-align: center;
+        }
+
+        .about-content {
+            align-self: center;
+        }
+
+        .about-content h2 {
+            color: var(--primary-blue);
+            font-size: 2.4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            color: var(--text-gray);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 2rem;
+            background: var(--white);
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.1fr 1.4fr;
+            gap: 3rem;
+        }
+
+        .contact-info h2 {
+            color: var(--primary-blue);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: start;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--secondary-blue);
+            margin-right: 1rem;
+            min-width: 30px;
+        }
+
+        .contact-details h3 {
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-details p {
+            color: var(--text-gray);
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-details a {
+            color: var(--secondary-blue);
+            text-decoration: none;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s;
+            overflow: hidden;
+            background: #ffffff;
+        }
+
+        .social-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .map-wrapper {
+            margin-top: 1.5rem;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        /* Contact Form / Google Form */
+        .contact-form {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,40,85,0.18);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                padding: 1rem;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero-container,
+            .about-container,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .about-card {
+                order: -1;
+            }
+        }
+
+        /* Scroll animation base */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/47f7f2f4-2c7f-44f6-8a82-03a6b83ead86" alt="CA Prakash M Oswal & Co." class="logo">
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
-      </div>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="container hero-grid">
-          <div>
-            <h1>Legacy expertise. Modern financial leadership</h1>
-            <p class="hero-copy">
-              From statutory audits to strategic financial leadership, we provide end-to-end solutions—combining 25 years of experience with modern VCFO and Internal Audit capabilities.
-            </p>
-            <div class="hero-actions">
-              <a href="https://forms.google.com/your-form-link" class="btn btn-primary" target="_blank" rel="noopener">Book Consultation</a>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Legacy Expertise.<br>Modern Financial Leadership</h1>
+                <p>Comprehensive chartered accountancy services built on trust, precision, and strategic insight</p>
+                <a href="#contact" class="cta-button">Get In Touch</a>
             </div>
-          </div>
+            <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/139ad6d3-911a-496e-9d24-77f11a774909" alt="Professional Business Services" class="hero-image">
         </div>
-      </section>
+    </section>
 
-      <section id="about" class="section">
+    <!-- Statistics Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-card animate-on-scroll">
+                <div class="stat-number">25+</div>
+                <div class="stat-label">Years of Experience</div>
+            </div>
+            <div class="stat-card animate-on-scroll">
+                <div class="stat-number">150+</div>
+                <div class="stat-label">Clients Served</div>
+            </div>
+            <div class="stat-card animate-on-scroll">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Sectors We Serve</div>
+            </div>
+            <div class="stat-card animate-on-scroll">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Team Members</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
         <div class="container">
-          <p class="section-label">About The Firm</p>
-          <h2>Your Trusted Financial and Compliance Partner</h2>
-          <p class="section-copy">
-            Founded in 1997 by CA Prakash M. Oswal, our firm has grown into a trusted Chartered Accountancy practice with a dedicated team of 30+ employees. For three decades, we have built our reputation on integrity, technical excellence, and long-term client relationships.
-          </p>
-          <p class="section-copy">
-            We provide comprehensive services across Audit, Taxation, Litigation, and Assurance—strengthening businesses with robust compliance and financial discipline. As business environments evolve, so do we. Our expanding capabilities in Virtual CFO, Advisory, and Internal Audit enable us to support clients not just in meeting regulatory requirements, but in driving performance, managing risk, and achieving sustainable growth.
-          </p>
-          <p class="section-copy">
-            Client-focused at our core, we combine deep technical rigor with personalized guidance—ensuring clarity in numbers, confidence in decisions, and consistency in execution.
-          </p>
-          <p class="section-copy">
-            Today, we stand as a full-spectrum financial partner, blending legacy expertise with forward-thinking financial leadership.
-          </p>
-        </div>
-      </section>
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive solutions tailored to your business needs</p>
+            
+            <div class="services-grid">
+                <!-- Audit & Assurance -->
+                <div class="service-card service-audit animate-on-scroll">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Audit &amp; Assurance</h3>
+                    <p>Enhancing financial credibility through robust statutory, tax, and internal audits with a risk-based, detail-oriented approach that strengthens internal controls and governance frameworks.</p>
+                </div>
 
-      <section id="services" class="section section-alt">
-        <div class="container">
-          <p class="section-label">Services</p>
-          <h2>What we do</h2>
-          <div class="card-grid">
-            <article class="card">
-              <h3>Audit & Assurance</h3>
-              <p>
-                Our Audit and Assurance services are designed to enhance financial credibility, strengthen internal controls, and ensure regulatory compliance. We conduct statutory audits, tax audits and other assurance engagements with a risk-based and detail-oriented approach. By combining technical expertise with practical insights, we help businesses improve transparency, identify operational gaps, and build stakeholder confidence.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Taxation, Compliance & Litigation</h3>
-              <p>
-                Our Taxation and Litigation services help businesses navigate complex tax regulations with clarity and confidence. We provide comprehensive support in direct and indirect taxation, including advisory, compliance, assessments, and representation before tax authorities. With a strategic and detail-oriented approach, we assist clients in minimizing risks, resolving disputes efficiently, and ensuring sustained regulatory compliance.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Internal Audit</h3>
-              <p>
-                Our Internal Audit services focus on strengthening governance, enhancing risk management, and improving operational efficiency. Through a systematic and risk-based approach, we evaluate internal controls, identify process gaps, and recommend practical improvements. Beyond compliance, we aim to add value by helping management build stronger systems, reduce exposure to risk, and support informed decision-making.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Virtual CFO</h3>
-              <p>
-                Our Virtual CFO services provide businesses with strategic financial leadership without the cost of a full-time CFO. We support budgeting, forecasting, MIS reporting, cash flow management, financial planning, and investor readiness. By combining strong financial discipline with forward-looking insights, we help management make informed decisions, improve profitability, and drive sustainable growth.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Accounting and Bookkeeping</h3>
-              <p>
-                Our Accounting and Bookkeeping services ensure accurate, timely, and compliant financial records. We manage day-to-day transactions, ledger maintenance, reconciliations, financial statement preparation, and statutory compliance. With a structured and technology-driven approach, we provide reliable financial data that supports informed decision-making and smooth business operations.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Ancillary Services</h3>
-              <p>
-                <strong>Business Formation & Structuring</strong> – Assistance with entity incorporation, registrations, and optimal structuring for tax and regulatory efficiency.
-                <br><br>
-                <strong>Compliance Management</strong> – Ongoing support for ROC filings, corporate law compliance, and regulatory reporting.
-                <br><br>
-                <strong>Financial Due Diligence</strong> – Independent financial reviews for investments, acquisitions, and strategic transactions.
-                <br><br>
-                <strong>Project Reports & CMA Data</strong> – Preparation of financial projections and reports for bank financing and credit facilities.
-                <br><br>
-                <strong>Management Reporting (MIS)</strong> – Customized reporting frameworks to improve monitoring and decision-making.
-                <br><br>
-                <strong>Process & Control Advisory</strong> – Designing and strengthening internal processes for improved governance and efficiency.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
+                <!-- Taxation -->
+                <div class="service-card service-tax animate-on-scroll">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-scale-balanced"></i>
+                    </div>
+                    <h3>Taxation</h3>
+                    <p>End-to-end direct and indirect tax support including income tax planning, GST compliance, tax audits, return filing, and representation before authorities for optimized, compliant outcomes.</p>
+                </div>
 
-      <section id="contact" class="section">
-        <div class="container">
-          <p class="section-label">Contact Us</p>
-          <h2>Speak with our team</h2>
-          <div class="contact-details-grid">
-            <div class="contact-block">
-              <h3>Email ID</h3>
-              <p><a href="mailto:pmo.pune@yahoo.in">pmo.pune@yahoo.in</a></p>
-              <p><a href="mailto:Oswalpranav05@gmail.com">Oswalpranav05@gmail.com</a></p>
-            </div>
-            <div class="contact-block">
-              <h3>Phone Number</h3>
-              <p><a href="tel:+912024240127">+91 20 24240127</a></p>
-              <p><a href="tel:+912024240976">+91 20 24240976</a></p>
-              <p><a href="tel:+918554073027">+91 85540 73027</a></p>
-            </div>
-            <div class="contact-block">
-              <h3>Address</h3>
-              <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.8467073827396!2d73.8447!3d18.4932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c07ce6b6b6b5%3A0x0!2sGanga%20Collidium%20Bibwewadi%20Pune!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-              <p style="margin-top: 12px;">3rd floor, Ganga Collidium, Office No. 304/305, Bibwewadi, Pune, Maharashtra 411037</p>
-            </div>
-            <div class="contact-block">
-              <h3>Follow Us</h3>
-              <p>
-                <a href="https://www.linkedin.com/company/prakash-m-oswal/" target="_blank" rel="noopener">LinkedIn</a> | 
-                <a href="https://www.instagram.com/prakashmoswal/" target="_blank" rel="noopener">Instagram</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+                <!-- Accounting & Bookkeeping -->
+                <div class="service-card service-account animate-on-scroll">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3>Accounting &amp; Bookkeeping</h3>
+                    <p>Reliable accounting, bookkeeping, and financial statement preparation that keeps your records accurate, current, and decision-ready throughout the year.</p>
+                </div>
 
-      <section class="section stats-section">
-        <div class="container">
-          <div class="stats-grid">
-            <div class="stat-item">
-              <h3 class="stat-number">20+</h3>
-              <p>Employees</p>
-            </div>
-            <div class="stat-item">
-              <h3 class="stat-number">25+</h3>
-              <p>Years of experience</p>
-            </div>
-            <div class="stat-item">
-              <h3 class="stat-number">15+</h3>
-              <p>Sectors we serve</p>
-            </div>
-            <div class="stat-item">
-              <h3 class="stat-number">150+</h3>
-              <p>Clients served</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+                <!-- Internal Audit -->
+                <div class="service-card service-internal animate-on-scroll">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Internal Audit</h3>
+                    <p>Independent internal audits focused on process improvement, control testing, risk management, and compliance to strengthen organizational resilience and efficiency.</p>
+                </div>
 
-    <footer class="footer">
-      <div class="container footer-row">
-        <p>© <span id="year"></span> Prakash M Oswal & Company. All rights reserved.</p>
-      </div>
+                <!-- Virtual CFO -->
+                <div class="service-card service-vcfo animate-on-scroll">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Virtual CFO</h3>
+                    <p>Strategic financial leadership on a flexible model, covering budgeting, forecasting, cash flow management, board reporting, and long-term capital planning.</p>
+                </div>
+
+                <!-- Ancillary Services -->
+                <div class="service-card service-ancil animate-on-scroll">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Ancillary Services</h3>
+                    <p>Support across formation, compliance, and growth phases including entity structuring, ROC and regulatory filings, due diligence, project reports, CMA data, MIS design, and process &amp; control advisory.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-card animate-on-scroll">
+                <div class="about-image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/2062730b-eb08-4c28-ae96-aca1cda0fdec" alt="CA Prakash Oswal" class="about-image">
+                    <p class="about-name">CA Prakash M Oswal</p>
+                    <p class="about-title">Founder &amp; Principal</p>
+                    <p class="about-card-tagline">Blending legacy expertise with modern financial insight.</p>
+                </div>
+            </div>
+            <div class="about-content animate-on-scroll">
+                <h2>About the Firm</h2>
+                <p>CA Prakash M Oswal &amp; Co. is a full-service chartered accountancy firm committed to delivering excellence in audit, taxation, accounting, and advisory services. Founded with a vision to provide holistic financial solutions, our practice serves a diverse clientele ranging from startups and SMEs to established corporates across various industries.</p>
+                <p>With years of experience and a team of dedicated professionals, we pride ourselves on understanding our clients' unique challenges and delivering tailored solutions that drive growth, ensure compliance, and enhance operational efficiency.</p>
+                <p>Our approach is rooted in integrity, technical expertise, and a commitment to building long-term relationships based on trust and results. Whether you need statutory compliance support, strategic financial guidance, or comprehensive business advisory, we are your reliable partner in navigating the complexities of the financial and regulatory landscape.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Get In Touch</h2>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-details">
+                        <h3>Office Address</h3>
+                        <p>3rd Floor, Ganga Collidium,</p>
+                        <p>Office No. 304/305, Bibwewadi,</p>
+                        <p>Pune, Maharashtra 411037</p>
+                    </div>
+                </div>
+
+                <div class="map-wrapper">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.704035545635!2d73.861!3d18.541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eaf4f9c1b7c7%3A0x0!2sGanga%20Collidium%2C%20Bibwewadi%2C%20Pune%20411037!5e0!3m2!1sen!2sin!4v1700000000000"
+                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <div class="contact-item" style="margin-top:1.5rem;">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-details">
+                        <h3>Phone</h3>
+                        <p><a href="tel:+918208448928">+91 8208448928</a></p>
+                        <p><a href="tel:+912024240127">+91 20 24240127</a></p>
+                        <p><a href="tel:+912024240976">+91 20 24240976</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-details">
+                        <h3>Email</h3>
+                        <p><a href="mailto:pmo.pune@yahoo.in">pmo.pune@yahoo.in</a></p>
+                        <p><a href="mailto:oswalpranav05@gmail.com">oswalpranav05@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">🕒</div>
+                    <div class="contact-details">
+                        <h3>Business Hours</h3>
+                        <p>Monday - Saturday</p>
+                        <p>11:00 AM to 7:00 PM</p>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/company/prakash-m-oswal-and-co/" target="_blank" class="social-icon" title="LinkedIn">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.instagram.com/caprakashoswal.co?igsh=Z24ydjM4enQ2NmVt" target="_blank" class="social-icon" title="Instagram">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem; font-size: 1.5rem;">Send us a Message</h3>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf-qDb6U9JA5pAbRfvjV1LP7Cq_IpR1XMAB3XySVoJ6UKuNTw/viewform?usp=dialog?embedded=true"
+                        width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0"
+                        style="border-radius: 10px;">Loading…</iframe>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-gray); text-align: center;">
+                    Or email us directly at <a href="mailto:oswalpranav05@gmail.com" style="color: var(--secondary-blue);">oswalpranav05@gmail.com</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 CA Prakash M Oswal &amp; Co. All rights reserved.</p>
+        <p>Professional Chartered Accountancy Services | Pune, Maharashtra</p>
     </footer>
 
-    <script src="./script.js"></script>
-  </body>
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    document.getElementById('navLinks').classList.remove('active');
+                }
+            });
+        });
+
+        // Header scroll effect
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll <= 0) {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+                return;
+            }
+            
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                header.style.transform = 'translateY(0)';
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.15)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transitionDelay = `${index * 0.08}s`;
+            observer.observe(el);
+        });
+    </script>
+</body>
 </html>
