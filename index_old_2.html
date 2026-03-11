@@ -628,7 +628,7 @@
             </div>
             <div class="stat-card animate-on-scroll">
                 <div class="stat-number">150+</div>
-                <div class="stat-label">Clients Serving</div>
+                <div class="stat-label">Clients Served</div>
             </div>
             <div class="stat-card animate-on-scroll">
                 <div class="stat-number">15+</div>
@@ -788,82 +788,9 @@
 
             <div class="contact-form">
                 <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem; font-size: 1.5rem;">Send us a Message</h3>
-                <form id="contact-form" action="https://formspree.io/f/mvzbjdzk" method="POST" style="max-width: 100%;">
-                    <input type="hidden" name="_subject" value="New Enquiry from CA Prakash M Oswal Website">
-
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
-                        <div class="form-group">
-                            <label for="name" style="display: block; margin-bottom: 0.5rem; color: var(--text-light); font-weight: 500;">Name*</label>
-                            <input type="text" id="name" name="name" required 
-                                   style="width: 100%; padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: rgba(255,255,255,0.05); color: var(--text-light); font-size: 0.95rem; transition: all 0.3s ease;"
-                                   placeholder="Your full name"
-                                   onfocus="this.style.borderColor='var(--primary-blue)'; this.style.background='rgba(255,255,255,0.08)';"
-                                   onblur="this.style.borderColor='rgba(255,255,255,0.1)'; this.style.background='rgba(255,255,255,0.05)';">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email" style="display: block; margin-bottom: 0.5rem; color: var(--text-light); font-weight: 500;">Email*</label>
-                            <input type="email" id="email" name="email" required 
-                                   style="width: 100%; padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: rgba(255,255,255,0.05); color: var(--text-light); font-size: 0.95rem; transition: all 0.3s ease;"
-                                   placeholder="you@example.com"
-                                   onfocus="this.style.borderColor='var(--primary-blue)'; this.style.background='rgba(255,255,255,0.08)';"
-                                   onblur="this.style.borderColor='rgba(255,255,255,0.1)'; this.style.background='rgba(255,255,255,0.05)';">
-                        </div>
-                    </div>
-
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
-                        <div class="form-group">
-                            <label for="phone" style="display: block; margin-bottom: 0.5rem; color: var(--text-light); font-weight: 500;">Phone*</label>
-                            <input type="tel" id="phone" name="phone" required 
-                                   style="width: 100%; padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: rgba(255,255,255,0.05); color: var(--text-light); font-size: 0.95rem; transition: all 0.3s ease;"
-                                   placeholder="+91-XXXXXXXXXX"
-                                   onfocus="this.style.borderColor='var(--primary-blue)'; this.style.background='rgba(255,255,255,0.08)';"
-                                   onblur="this.style.borderColor='rgba(255,255,255,0.1)'; this.style.background='rgba(255,255,255,0.05)';">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="service" style="display: block; margin-bottom: 0.5rem; color: var(--text-light); font-weight: 500;">Service Interested In*</label>
-                            <select id="service" name="service" required 
-                                    style="width: 100%; padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: rgba(255,255,255,0.05); color: var(--text-light); font-size: 0.95rem; transition: all 0.3s ease; cursor: pointer;"
-                                    onfocus="this.style.borderColor='var(--primary-blue)'; this.style.background='rgba(255,255,255,0.08)';"
-                                    onblur="this.style.borderColor='rgba(255,255,255,0.1)'; this.style.background='rgba(255,255,255,0.05)';">
-                                <option value="" style="background: var(--dark-bg); color: var(--text-light);">Select a service</option>
-                                <option value="Statutory and Tax Audit" style="background: var(--dark-bg); color: var(--text-light);">Statutory and Tax Audit</option>
-                                <option value="Taxation and GST" style="background: var(--dark-bg); color: var(--text-light);">Taxation and GST</option>
-                                <option value="Accounting and Bookkeeping" style="background: var(--dark-bg); color: var(--text-light);">Accounting and Bookkeeping</option>
-                                <option value="Internal Audit and Controls" style="background: var(--dark-bg); color: var(--text-light);">Internal Audit and Controls</option>
-                                <option value="Virtual CFO Services" style="background: var(--dark-bg); color: var(--text-light);">Virtual CFO Services</option>
-                                <option value="Business Advisory and Compliance" style="background: var(--dark-bg); color: var(--text-light);">Business Advisory and Compliance</option>
-                                <option value="Other" style="background: var(--dark-bg); color: var(--text-light);">Other</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-group" style="margin-bottom: 1.5rem;">
-                        <label for="message" style="display: block; margin-bottom: 0.5rem; color: var(--text-light); font-weight: 500;">Message / Requirements</label>
-                        <textarea id="message" name="message" rows="5" 
-                                  style="width: 100%; padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: rgba(255,255,255,0.05); color: var(--text-light); font-size: 0.95rem; font-family: inherit; resize: vertical; transition: all 0.3s ease;"
-                                  placeholder="Share brief details about your requirements (optional)"
-                                  onfocus="this.style.borderColor='var(--primary-blue)'; this.style.background='rgba(255,255,255,0.08)';"
-                                  onblur="this.style.borderColor='rgba(255,255,255,0.1)'; this.style.background='rgba(255,255,255,0.05)';"></textarea>
-                    </div>
-
-                    <!-- Honeypot anti-spam field -->
-                    <div style="display: none;">
-                        <label for="_gotcha">Leave this empty</label>
-                        <input id="_gotcha" name="_gotcha" type="text">
-                    </div>
-
-                    <button type="submit" class="cta-button" style="width: 100%; padding: 1rem; background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue)); color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);"
-                            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(0, 123, 255, 0.4)';"
-                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0, 123, 255, 0.3)';">
-                        Submit Enquiry
-                    </button>
-
-                    <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-gray); text-align: center;">
-                        By submitting this form, you consent to us contacting you regarding your enquiry.
-                    </p>
-                </form>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf-qDb6U9JA5pAbRfvjV1LP7Cq_IpR1XMAB3XySVoJ6UKuNTw/viewform?usp=dialog?embedded=true"
+                        width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0"
+                        style="border-radius: 10px;">Loading…</iframe>
                 <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-gray); text-align: center;">
                     Or email us directly at <a href="mailto:oswalpranav05@gmail.com" style="color: var(--secondary-blue);">oswalpranav05@gmail.com</a>
                 </p>
